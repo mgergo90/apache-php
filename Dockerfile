@@ -49,7 +49,8 @@ RUN a2enmod rewrite && \
 	# Composer
     && curl -fSL "https://getcomposer.org/installer" -o composer-setup.php \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
-    && rm composer-setup.php;
+    && rm composer-setup.php \
+    && composer global require hirak/prestissimo;
 
 EXPOSE 80
 
